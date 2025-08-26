@@ -2,62 +2,143 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>alrr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Papelería Dulce Arte</title>
   <style>
+    :root {
+      --rosa: #fbd3e9;
+      --menta: #c2f0ea;
+      --lila: #e0bbf9;
+      --blanco: #ffffff;
+      --gris: #6e6e6e;
+    }
+
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #1e3c72, #2a5298);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      background-color: var(--rosa);
+      color: var(--gris);
+    }
+
+    header {
+      background-color: var(--lila);
+      padding: 30px;
       text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .container {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      color: #4a4a4a;
     }
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
+    nav {
+      margin-top: 10px;
     }
 
-    p {
-      font-size: 18px;
-      margin-top: 0;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: white;
-      color: #2a5298;
+    nav a {
+      margin: 0 15px;
       text-decoration: none;
+      color: #4a4a4a;
       font-weight: bold;
-      border-radius: 30px;
-      transition: background 0.3s;
     }
 
-    .btn:hover {
-      background-color: #f0f0f0;
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .sobre {
+      background-color: var(--blanco);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .producto {
+      background-color: var(--menta);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .producto h3 {
+      margin: 10px 0 5px;
+    }
+
+    .testimonios {
+      margin-top: 40px;
+      background-color: #fceaff;
+      border-radius: 12px;
+      padding: 30px;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: var(--lila);
+      color: #4a4a4a;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Bienvenido a alrr</h1>
-    <p>Tu espacio digital comienza aquí.</p>
-    <a href="#" class="btn">Descubre más</a>
-  </div>
+
+  <header>
+    <h1>Papelería Dulce Arte</h1>
+    <nav>
+      <a href="#sobre">Sobre Nosotros</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <div class="sobre">
+      <h2>Sobre Nosotros</h2>
+      <p>En Papelería Dulce Arte nos apasiona la creatividad. Ofrecemos productos únicos y encantadores para que expreses tu estilo con colores, formas y mucho arte. Desde agendas hasta stickers, cada artículo está hecho con amor y cuidado por los detalles.</p>
+    </div>
+  </section>
+
+  <section id="productos">
+    <h2 style="text-align: center;">Nuestros Productos</h2>
+    <div class="productos">
+      <div class="producto">
+        <h3>Agendas 2025</h3>
+        <p>Diseños adorables y prácticos para tu día a día.</p>
+      </div>
+      <div class="producto">
+        <h3>Stickers</h3>
+        <p>Planifica y decora con estilo.</p>
+      </div>
+      <div class="producto">
+        <h3>Cuadernos personalizados</h3>
+        <p>Elige tu nombre, colores y portada favorita.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonios">
+    <h2 style="text-align: center;">Lo que dicen nuestros clientes</h2>
+    <p>"¡Me encantaron los diseños! Todo llega muy bien empaquetado y con detalles hermosos."</p>
+    <p>"Siento que cada pedido está hecho especialmente para mí."</p>
+  </section>
+
+  <footer id="contacto">
+    <p>📧 contacto@dulcearte.com | 📱 @papeleriadulcearte</p>
+    <p>Hecho con 💗 desde casa</p>
+  </footer>
+
 </body>
 </html>
