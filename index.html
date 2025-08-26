@@ -65,15 +65,32 @@
     }
 
     .producto {
-      background-color: var(--menta);
+      background-color: var(--blanco);
       border-radius: 12px;
       padding: 20px;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .producto:hover {
+      transform: scale(1.02);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
     }
 
     .producto h3 {
-      margin: 10px 0 5px;
+      margin: 15px 0 5px;
+      font-size: 20px;
+    }
+
+    .producto p {
+      font-size: 14px;
     }
 
     .testimonios {
@@ -115,14 +132,17 @@
     <h2 style="text-align: center;">Nuestros Productos</h2>
     <div class="productos">
       <div class="producto">
+        <img src="pegamento.jpg" alt="Agendas 2025">
         <h3>Agendas 2025</h3>
         <p>Diseños adorables y prácticos para tu día a día.</p>
       </div>
       <div class="producto">
+        <img src="cuaderno.jpg" alt="Stickers">
         <h3>Stickers</h3>
         <p>Planifica y decora con estilo.</p>
       </div>
       <div class="producto">
+        <img src="papeleria.jpg" alt="Cuadernos personalizados">
         <h3>Cuadernos personalizados</h3>
         <p>Elige tu nombre, colores y portada favorita.</p>
       </div>
